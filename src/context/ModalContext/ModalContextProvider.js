@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import { ModalContext } from './ModalContext';
 import { Modal } from '../../components/Modal';
 
-export const ModalProvider = ({children}, event) => {
+export const ModalProvider = ({children}) => {
     const [modalOpened, setModalOpened] = useState(false);
-    const event1 = event; 
-    console.log('event^^', event1);
+    const [modalConf, setModalConf] = useState('');
 
     const openModal = (modalConfig) => {
-        // const {title} = modalConfig;
+        console.log('modalConfig', modalConfig);
         setModalOpened(true);
-
+        setModalConf(modalConfig);
     };
 
     const closeModal = () => {
@@ -25,7 +24,7 @@ export const ModalProvider = ({children}, event) => {
 
     return (
         <ModalContext.Provider value = {valueModalProvider}>
-            {modalOpened && <Modal />}
+            {modalOpened && <Modal data={modalConf}/>}
             {children}
         </ModalContext.Provider>
     )

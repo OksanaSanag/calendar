@@ -3,37 +3,19 @@ import './style.css';
 
 import { ModalContext } from '../../context';
 
-import FullCalendar, { formatDate } from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
-import timeGridPlugin from '@fullcalendar/timegrid'
-import interactionPlugin from '@fullcalendar/interaction'
-import { INITIAL_EVENTS, createEventId } from '../../event-utils'
-
-
 
 export const Modal = (props) => {
-    const {children, title} = props;     console.log('props', props); 
+    const [eventTitle, setEventTitle] = useState('');
+    const { closeModal } = useContext(ModalContext);
 
-    const [eventTitle, setEventTitle] = useState('first ev');
-    const { openModal, closeModal } = useContext(ModalContext);
+    const selectInfo = props.data;     //console.log('props.data::', selectInfo);
 
     const doEvendTitle = (e) => {
         setEventTitle(e.target.value);
     };
 
-    const handleDateSelect = (selectInfo) => {
-        let title = eventTitle; //console.log('title::', title);
-        let calendarApi = selectInfo.view.calendar
-        // calendarApi.unselect() // clear date selection
-        if (title) {
-          calendarApi.addEvent({
-            id: createEventId(),
-            title,
-            start: selectInfo.startStr,
-            end: selectInfo.endStr,
-            allDay: selectInfo.allDay
-          })
-        }
+    const saveEvent = () => {
+
       }
     
     return (
@@ -41,13 +23,13 @@ export const Modal = (props) => {
             <div className="cross" >X</div>
             <div className="modal-body">
                 <input type='text' className='modal-input' placeholder='event name' value={eventTitle} onChange={doEvendTitle}></input>
-                <input className='modal-input' placeholder='event date'></input>
+                <input className='modal-input' placeholder='event day' value={selectInfo.startStr}></input>
                 <input className='modal-input' placeholder='event time'></input>
                 <input className='modal-input' placeholder='notes'></input>
             </div>
             <div className="modal-footer">
                 <button className='modal-button' onClick={closeModal}>Cancel</button>
-                <button className='modal-button' onClick={handleDateSelect}>Save</button>
+                <button className='modal-button' onClick={saveEvent}>Save</button>
             </div>
         </div>
     )

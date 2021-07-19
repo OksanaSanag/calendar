@@ -18,7 +18,8 @@ export const FullCalendarComponent = () => {
 
     const clickModalButton = (selectInfo) => {
         setEventData(selectInfo); console.log('selectInfo::1', selectInfo)
-        openModal();
+        openModal(selectInfo); 
+
     };
 
     const handleEventClick = (clickInfo) => {
