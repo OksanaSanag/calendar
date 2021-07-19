@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/calendar/static/css/main.c686c4a5.chunk.css",
+    "main.js": "/calendar/static/js/main.264afa2f.chunk.js",
+    "main.js.map": "/calendar/static/js/main.264afa2f.chunk.js.map",
+    "runtime-main.js": "/calendar/static/js/runtime-main.44fe8989.js",
+    "runtime-main.js.map": "/calendar/static/js/runtime-main.44fe8989.js.map",
+    "static/css/2.52ab59f8.chunk.css": "/calendar/static/css/2.52ab59f8.chunk.css",
+    "static/js/2.da2ee931.chunk.js": "/calendar/static/js/2.da2ee931.chunk.js",
+    "static/js/2.da2ee931.chunk.js.map": "/calendar/static/js/2.da2ee931.chunk.js.map",
+    "static/js/3.7f6f37be.chunk.js": "/calendar/static/js/3.7f6f37be.chunk.js",
+    "static/js/3.7f6f37be.chunk.js.map": "/calendar/static/js/3.7f6f37be.chunk.js.map",
+    "index.html": "/calendar/index.html",
+    "static/css/2.52ab59f8.chunk.css.map": "/calendar/static/css/2.52ab59f8.chunk.css.map",
+    "static/css/main.c686c4a5.chunk.css.map": "/calendar/static/css/main.c686c4a5.chunk.css.map",
+    "static/js/2.da2ee931.chunk.js.LICENSE.txt": "/calendar/static/js/2.da2ee931.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44fe8989.js",
+    "static/css/2.52ab59f8.chunk.css",
+    "static/js/2.da2ee931.chunk.js",
+    "static/css/main.c686c4a5.chunk.css",
+    "static/js/main.264afa2f.chunk.js"
+  ]
+}
