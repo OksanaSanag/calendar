@@ -1,0 +1,51 @@
+.modal {
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #fff;
+    border: solid rgb(31, 30, 30) 2px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+.cross{
+    display: flex;
+    align-self: flex-end;
+    padding: 0 10px 0 0;
+}
+
+.modal-body {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(232, 219, 245);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+}
+
+.modal-input {
+    height: 10px;
+    border:none;
+    background: transparent; /* Прозрачный фон */
+    margin: 6px; /* Отступы от линии */
+    padding: 5px 0 5px 5px; /* Поля в тексте */
+}
+
+.modal-button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
