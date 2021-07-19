@@ -12,17 +12,13 @@ import { INITIAL_EVENTS, createEventId } from '../../event-utils'
 
 
 export const Modal = (props) => {
-    const {children, title} = props; console.log('propsvalue', props.value);
+    const {children, title} = props;     console.log('props', props); 
 
     const [eventTitle, setEventTitle] = useState('first ev');
     const { openModal, closeModal } = useContext(ModalContext);
 
-    console.log('props', props); 
-
     const doEvendTitle = (e) => {
-        //console.log(e.target.value);
         setEventTitle(e.target.value);
-        //console.log('eventTitle', eventTitle);
     };
 
     const handleDateSelect = (selectInfo) => {
